@@ -1,0 +1,30 @@
+1. Double Pointer (Pointer to Pointer) in C
+(link:https://www.geeksforgeeks.org/double-pointer-pointer-pointer-c/)
+    Declaring Pointer to Pointer is similar to declaring pointer in C. The difference is we have to place an additional ‘*’ before the name of pointer.
+    Syntax:   int **ptr;    // declaring double pointer
+    
+2. Dynamic Memory Allocation in C using malloc(), calloc(), free() and realloc()
+(link: https://www.geeksforgeeks.org/dynamic-memory-allocation-in-c-using-malloc-calloc-free-and-realloc/)
+    “malloc” or “memory allocation” method is used to dynamically allocate a single large block of memory with the specified size. It returns a pointer of type void which can be cast into a pointer of any form.
+
+       Syntax: ptr = (cast-type*) malloc(byte-size)
+
+       For Example:
+       ptr = (int*) malloc(100 * sizeof(int));
+
+       Since the size of int is 4 bytes,this statement will allocate 400 bytes of memory. 
+       And, the pointer ptr holds the address of the first byte in the allocated memory.
+       
+3. Multidimensional Arrays in C / C++
+(link: https://www.geeksforgeeks.org/multidimensional-arrays-c-cpp/)
+     Array- Basics
+     In C/C++, we can define multidimensional arrays in simple words as array of arrays. 
+     Data in multidimensional arrays are stored in tabular form (in row major order).
+     
+syntax: data_type  array_name[size1][size2]....[sizeN];
+
+        data_type: Type of data to be stored in the array. Here data_type is valid C/C++ data type
+        array_name: Name of the array
+        
+Examples: Two dimensional array:
+          int two_d[10][20];
