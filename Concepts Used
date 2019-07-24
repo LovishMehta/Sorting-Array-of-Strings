@@ -1,11 +1,13 @@
 1. Double Pointer (Pointer to Pointer) in C
 (link:https://www.geeksforgeeks.org/double-pointer-pointer-pointer-c/)
-    Declaring Pointer to Pointer is similar to declaring pointer in C. The difference is we have to place an additional ‘*’ before the name of pointer.
+    Declaring Pointer to Pointer is similar to declaring pointer in C. The difference is we have to place an additional ‘*’ before 
+    the name of pointer.
     Syntax:   int **ptr;    // declaring double pointer
     
 2. Dynamic Memory Allocation in C using malloc(), calloc(), free() and realloc()
 (link: https://www.geeksforgeeks.org/dynamic-memory-allocation-in-c-using-malloc-calloc-free-and-realloc/)
-    “malloc” or “memory allocation” method is used to dynamically allocate a single large block of memory with the specified size. It returns a pointer of type void which can be cast into a pointer of any form.
+    “malloc” or “memory allocation” method is used to dynamically allocate a single large block of memory with the specified size.
+     It returns a pointer of type void which can be cast into a pointer of any form.
 
        Syntax: ptr = (cast-type*) malloc(byte-size)
 
