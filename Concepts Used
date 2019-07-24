@@ -30,3 +30,16 @@ syntax: data_type  array_name[size1][size2]....[sizeN];
         
 Examples: Two dimensional array:
           int two_d[10][20];
+
+
+4. Link between "2D Array" and "Double pointer".
+refer link: https://www.techiedelight.com/pass-2d-array-function-parameter/
+
+suppose you have a function 
+                    int fun(int m, int n, int **arr)
+               so in the above function Double pointer => **arr ,is the pointer to the first element of the 2D ARRAY. To assign values
+               or access the 2D array one method is using arr[i][j]. => i = row element, and j = columns
+         arr[0,0] => 1st element of the 2D array. In similar manner j=0   arr[0,0], arr[0,1], arr[0,2]
+                                                                    j=1   arr[1,0], arr[1,1], arr[1,2]
+                                                                    so on.....
+               
