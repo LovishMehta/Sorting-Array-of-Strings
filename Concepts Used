@@ -59,7 +59,8 @@ suppose you have a function
                
 5. Function Pointer
 (refer link : https://www.geeksforgeeks.org/function-pointer-in-c/)
-
+Also refer link: https://www.cprogramming.com/tutorial/function-pointers.html
+ 
 *In C, like normal data pointers (int *, char *, etc), we can have pointers to functions. 
 
 *Like normal pointers, a function pointer can be passed as an argument and can also be returned from a function.
