@@ -6,7 +6,7 @@ MAke use of two for loops.
      
      for(int i =0; i < len; i++)
      {
-        for(int j = 0+i ; j< len; j++)
+        for(int j = 1+i ; j< len; j++)
           {
             if(arr[i]>arr[j])
             {
@@ -17,22 +17,22 @@ MAke use of two for loops.
     
     ALGORITHM EXAMPLE
     Outer FOR LOOP 
-          i = 0
+          i = 0, j=1
     inner FOR LOOP running 
-     5 8 2 4 1    // j = 0 , Comparing 5 and 8 (5 is smaller than 8) so=> no change
-     2 8 5 4 1    // j = 1 , Comparing 5 and 2 (5 is greater than 2) so=> 5 and 2 swapped
-     2 8 5 4 1    // j = 2 , Comparing 2 and 4 (2 is smaller than 4) so=> no change
-     1 8 5 4 2    // j = 3 , Comparing 2 and 1 (2 is greater than 1) so=> 2 and 1 swapped
+     5 8 2 4 1    // j = 1 , Comparing 5 and 8 (5 is smaller than 8) so=> no change
+     2 8 5 4 1    // j = 2 , Comparing 5 and 2 (5 is greater than 2) so=> 5 and 2 swapped
+     2 8 5 4 1    // j = 3 , Comparing 2 and 4 (2 is smaller than 4) so=> no change
+     1 8 5 4 2    // j = 4 , Comparing 2 and 1 (2 is greater than 1) so=> 2 and 1 swapped
      (In this way we got Smallest element of Array)
      
      outer FOR LOOP 
-         i = 1
-     inner FOR LOOP running (NOTE: j will start from j = 0+i => 1 because the smallest element has reached the front positon so
+         i = 1 , j = 2
+     inner FOR LOOP running (NOTE: j will start from j = 1+i => 2 because the smallest element has reached the front positon so
                                    no need to start and check from there, now we will find the 2nd smallest element)
         before starting => 8 5 4 2 ( leave 1 for now)
-      5 8 4 2    // j = 1 , comparing 8 and 5 (8 is greater than 5) so=> swapped
-      4 8 5 2    // j = 2 , comparing 5 and 4 (5 is greater than 4) so=> swapped
-      2 8 5 4    // j = 3 , comparing 4 and 2 (4 is greater than 2) so=> swapped
+      5 8 4 2    // j = 2 , comparing 8 and 5 (8 is greater than 5) so=> swapped
+      4 8 5 2    // j = 3 , comparing 5 and 4 (5 is greater than 4) so=> swapped
+      2 8 5 4    // j = 4 , comparing 4 and 2 (4 is greater than 2) so=> swapped
       (In this way we got our 2nd Smallest of Array)
       
       cotinue in same manner.........
