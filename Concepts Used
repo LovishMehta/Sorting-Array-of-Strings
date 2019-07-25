@@ -1,5 +1,9 @@
 1. Double Pointer (Pointer to Pointer) in C
 (link:https://www.geeksforgeeks.org/double-pointer-pointer-pointer-c/)
+link: https://beginnersbook.com/2014/01/c-pointer-to-pointer/
+
+Good explanation Link: https://drive.google.com/drive/u/0/folders/10FNtAfaO0MgEqvTpFyo5b0fW6K8C1Pek
+
     Declaring Pointer to Pointer is similar to declaring pointer in C. The difference is we have to place an additional ‘*’ before 
     the name of pointer.
     Syntax:   int **ptr;    // declaring double pointer
@@ -34,6 +38,9 @@ Examples: Two dimensional array:
 
 4. Link between "2D Array" and "Double pointer".
 refer link: https://www.techiedelight.com/pass-2d-array-function-parameter/
+      
+
+Good explanation Link: https://drive.google.com/drive/u/0/folders/10FNtAfaO0MgEqvTpFyo5b0fW6K8C1Pek
 
 suppose you have a function 
                     int fun(int m, int n, int **arr)
