@@ -7,7 +7,9 @@ Good explanation Link: https://drive.google.com/drive/u/0/folders/10FNtAfaO0MgEq
     Declaring Pointer to Pointer is similar to declaring pointer in C. The difference is we have to place an additional ‘*’ before 
     the name of pointer.
     Syntax:   int **ptr;    // declaring double pointer
-    
+
+#####################################################################################################################################
+
 2. Dynamic Memory Allocation in C using malloc(), calloc(), free() and realloc()
 (link: https://www.geeksforgeeks.org/dynamic-memory-allocation-in-c-using-malloc-calloc-free-and-realloc/)
     “malloc” or “memory allocation” method is used to dynamically allocate a single large block of memory with the specified size.
@@ -20,7 +22,9 @@ Good explanation Link: https://drive.google.com/drive/u/0/folders/10FNtAfaO0MgEq
 
        Since the size of int is 4 bytes,this statement will allocate 400 bytes of memory. 
        And, the pointer ptr holds the address of the first byte in the allocated memory.
-       
+ 
+ ####################################################################################################################################
+ 
 3. Multidimensional Arrays in C / C++
 (link: https://www.geeksforgeeks.org/multidimensional-arrays-c-cpp/)
      Array- Basics
@@ -35,6 +39,7 @@ syntax: data_type  array_name[size1][size2]....[sizeN];
 Examples: Two dimensional array:
           int two_d[10][20];
 
+###################################################################################################################################
 
 4. Link between "2D Array" and "Double pointer".
 refer link: https://www.techiedelight.com/pass-2d-array-function-parameter/
@@ -49,6 +54,8 @@ suppose you have a function
          arr[0,0] => 1st element of the 2D array. In similar manner j=0   arr[0,0], arr[0,1], arr[0,2]
                                                                     j=1   arr[1,0], arr[1,1], arr[1,2]
                                                                     so on.....
+ 
+ ####################################################################################################################################
                
 5. Function Pointer
 (refer link : https://www.geeksforgeeks.org/function-pointer-in-c/)
@@ -79,3 +86,70 @@ int main()
     wrapper(fun2); 
     return 0; 
 }
+
+#######################################################################################################################################
+
+6. Difference Between "*(int*)a" and "*a"
+      we have two cases 
+CASE I: when we have function => void fun(const void *p)  // pointer is of void type
+                                In the above function we can pass address of => int val, char val, float val (variable of any data type)
+                                i.e. irrespective of Data Type because the pointer is of void type.
+                                
+                                Now to 'acces the element' or 'we can say to get the value' pointed by pointer p ,we will have to 
+                                specify the type of data it is pointing to.
+                                
+                                Example
+                                #include<stdio.h>
+                                #include<conio.h>
+                                
+                                void fun(const void *p)
+                                {
+                                 int x = *(int*)p  // so here (int*) means integer pointer => pointer points to an integer 
+                                                   // After that *(int*) means => derefrencing the ponter to the integer, i.e. 
+                                                  // getting the value pointed by pointer.(Normally we use *p only if data type is known)
+                                   printf("%d",x)
+                                }  
+                                int main()
+                                {
+                                 int val = 10;
+                                 fun(&val);
+                                 return 0;
+                                } 
+                                
+CASE II: when we have function => void fun( int *p) // pointer is of int type
+                                 In the above function we can pass the address of  => int val (variiable of integer type only) 
+                                 because the pointer is already defined as "int", i.e. it will accept the address of only integers.
+                                 
+                                 Now in this case to "access the value pointed by pointer", we dont need to specify the data type
+                                 of pointer as it's already known. So we can directly write the pointer as "*p" to access the elements.
+                                 
+                                 Example
+                                 #include<conio.h>
+                                 #include<stdio.h>
+                                 
+                                 void fun(int *p)
+                                 {
+                                  int x = *p;
+                                  printf("%d",x);
+                                 } 
+                                 
+                                 int main()
+                                 {
+                                  int val = 10;
+                                  fun(&val);
+                                  return 0;
+                                 } 
+                              
+ #######################################################################################################################################                                
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                
