@@ -143,8 +143,52 @@ CASE II: when we have function => void fun( int *p) // pointer is of int type
                               
  #######################################################################################################################################                                
                                  
-                                 
-                                 
+  7. Methadology used in Solving "Sorting Array of Strings"
+  
+      1. Firstly comparing 1st element  of the strings with each other 
+      then further 3 cases are present in checking elements
+
+      Case I: if(element 1 of String 1 > element 1 of string 2)
+                { 
+                    return 1;
+                    Now returning 1 means swap the strings
+                }
+     Case II: if(elment 1 of string 1 == element 2 of string 2)
+                {
+                    In this case compare the next elements of the string
+                    if(element 2 of string 1 > element 2 of string 2)
+                      {
+                          if element 2 of string 1 is greater than swap, i.e.
+                          return 1
+                          {return 1;}
+                      }
+                    if(element 2 of string 1 == string 2 of string 2)
+                    { 
+                        if even the 2nd element of the strings are equal than
+                        compare the next elements(i.e 3rd, so on............) 
+                        until you don't find the result.(i.e. greater,equal,smaller)
+
+                        So for this i have used a loop
+                        int i=0;
+                        while(*(a+i)==*(b+i))
+                        {i++;}
+                        if(*(a+i)>*(b+i))
+                        {
+                            return 1; // i.e. swap the strings
+                        }
+                    }  
+                }           
+    Case III: Else case when neither the (element 1 of string 1 > element 1 of string2)
+                        nor the (element 1 of string 1 ==  element of string 2)
+                        {
+                            return -1;
+                        }
+
+   2. Secondaly using bubble sort in the string_sort function. Comparing each string 
+      with other string.
+   3. Swapping the number in the string_sort() function.                        
+  
+  #####################################################################################################################################                               
                                  
                                  
                                  
